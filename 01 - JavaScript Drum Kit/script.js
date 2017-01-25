@@ -13,6 +13,12 @@ window.addEventListener('keydown', function(event) {
   key.classList.add('playing')
 });
 
+function removeTransition(e){
+  if(e.propertyName !== 'transition') return;
+}
+
+const keys = document.querySelectorAll('.key')
+keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 
 
 
