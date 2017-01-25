@@ -14,7 +14,8 @@ window.addEventListener('keydown', function(event) {
 });
 
 function removeTransition(e){
-  if(e.propertyName !== 'transition') return;
+  if(e.propertyName !== 'transform') return;
+  this.classList.remove('playing')
 }
 
 const keys = document.querySelectorAll('.key')
